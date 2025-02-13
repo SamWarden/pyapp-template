@@ -1,7 +1,7 @@
 [project]
-name = "pytemplate"
+name = "pyapp"
 version = "0.1.0"
-description = "Template for a Python project"
+description = "Template for a Python app project"
 requires-python = ">=3.13"
 readme = "README.md"
 license = {file = "LICENSE.md"}
@@ -26,9 +26,9 @@ lint = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/SamWarden/pytemplate"
-Repository = "https://github.com/SamWarden/pytemplate"
-Issues = "https://github.com/SamWarden/pytemplate/issues"
+Homepage = "https://github.com/SamWarden/pyapp-template"
+Repository = "https://github.com/SamWarden/pyapp-template"
+Issues = "https://github.com/SamWarden/pyapp-template/issues"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
