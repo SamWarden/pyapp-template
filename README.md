@@ -7,7 +7,7 @@ Template for a Python app project
 Clone this template
 
 ```bash
-git clone git@github.com:SamWarden/pyapp.git appname
+git clone git@github.com:SamWarden/pyapp-template.git appname
 cd appname
 git remote rename origin template
 ```
