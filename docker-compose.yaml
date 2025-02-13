@@ -1,0 +1,20 @@
+services:
+  pyapp:
+    image: pyapp
+    build: .
+    container_name: pyapp
+    restart: unless-stopped
+#     ports:
+#       - "8000:8000"
+#     volumes:
+#       - pyapp-data:/app/data
+#     networks:
+#       - pyapp-network
+
+# volumes:
+#   pyapp-data:
+#     name: pyapp-data
+
+# networks:
+#   pyapp-network:
+#     name: pyapp-network
