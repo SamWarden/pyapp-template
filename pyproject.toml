@@ -25,6 +25,9 @@ lint = [
     "pylint==3.3.*",
 ]
 
+[project.scripts]
+pyapp = "pyapp.__main__:main"
+
 [project.urls]
 Homepage = "https://github.com/SamWarden/pyapp-template"
 Repository = "https://github.com/SamWarden/pyapp-template"
