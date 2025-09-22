@@ -1,5 +1,16 @@
 target-version = "py313"
 line-length = 120
+include = [
+    "pyproject.toml",
+    "src/**/*.py",
+    "tests/**/*.py",
+]
+exclude = [
+    ".git",
+    "__pycache__",
+    ".venv",
+    "dist",
+]
 
 [lint]
 select = [
@@ -42,7 +53,6 @@ select = [
     "SLOT",  # flake8-slots
     "SIM",  # flake8-simplify
     "TID",  # flake8-tidy-imports
-    "TC",  # flake8-type-checking
     "INT",  # flake8-gettext
     "PTH",  # flake8-use-pathlib
     "TD",  # flake8-todos
@@ -60,37 +70,16 @@ select = [
     "FURB",  # refurb
     "RUF",  # Ruff-specific rules
 ]
-
-exclude = [
-    ".git",
-    "__pycache__",
-    ".venv",
-    "env",
-    "dist",
-    "build",
-    "docs",
-    "benchmarks",
-]
 ignore = [
+    "ANN401", # Disallow typing.Any usage
     "A003", # Python builtin is shadowed by class attribute {name} from {row}
-    "B008", # Do not perform function call {name} in argument defaults
-    "B024", # `Recognizer` is an abstract base class, but it has no abstract methods
-    "B027", # `PushNotifier.send` is an empty method in an abstract base class, but has no abstract decorator
+    "B024", # An abstract base class, but it has no abstract methods
     "S101", # Use of `assert` detected
-    "PTH123", # `open("foo")` should be replaced by `Path("foo").open()`
     "RET504", # Unnecessary variable assignment before `return` statement
-    "TRY003", # Avoid specifying long messages outside the exception class
-    "EM102", # Exception must not use an f-string literal, assign to variable first
-    "N999", # Invalid module name
-    "TC003", # Move standard library import `uuid.UUID` into a type-checking block
-    "PGH003", # Use specific rule codes when ignoring type issues
-    "PGH004", # Use specific rule codes when using `noqa`
-    "SIM108", # Use ternary operator `address_id = body["address_id"] if lesson.category == CategoryEnum.B else slot.instructor.address_id` instead of if-else-block
-    "ANN401", # Dynamically typed expressions (typing.Any) are disallowed in `f`
+    "SIM108", # Use ternary operator instead of if-else-block
     "TD002", # Missing author in TODO; try: `# TODO(<author_name>): ...` or `# TODO @<author_name>: ...`
     "TD003", # Missing issue link on the line following this TODO
     "FIX002", # Line contains TODO, consider resolving the issue
-    "EM101", # Exception must not use a string literal, assign to variable first
     "ISC001", # Implicitly concatenated string literals on one line
     "COM812", # Explicitly concatenated string should be implicitly concatenated
 ]
